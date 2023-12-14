@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="Assets/style.css">
+</head>
+<body>
+    <div class="container ">
+        <form onsubmit="validateForm(event)" class="form" id="form">
+            <h2>Registration Form</h2>
+            <div class="form-control">
+                <label for="username">Username:</label>
+                <input type="text" id="username" autocomplete="off">
+                <span id="usernameError" class="error"></span>
+            </div>
+             
+            <div class="form-control">
+                <label for="email">Email:</label>
+                <input type="text" id="email" autocomplete="off">
+                <span id="emailError" class="error"></span>
+            </div>
+
+            <div class="form-control">
+                <label for="password">Password:</label>
+                <input type="password" id="password" autocomplete="off">
+                <span id="passwordError" class="error"></span>
+            </div>
+        
+            <div class="form-control">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" autocomplete="off">
+                <span id="confirmPasswordError" class="error"></span>
+            </div>
+             <div class="btn">
+                <button type="submit">Submit</button>
+                <button type="button" onclick="resetForm()">Reset</button>
+             </div>
+             
+            <div id="successMessage" class="success"></div>
+        </form>
+    </div>    
+
+    <script src="Assets/script.js"></script>
+</body>
+</html>
